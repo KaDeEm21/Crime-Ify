@@ -1,8 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Tasks.dart';
-import 'package:untitled/home.dart';
+import 'package:untitled/drawerEndPoints/Tasks.dart';
+import 'package:untitled/drawerEndPoints/home.dart';
 
 import 'PlayerStats.dart';
 

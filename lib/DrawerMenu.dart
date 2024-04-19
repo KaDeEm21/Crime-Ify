@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/CustomDrawerHeader.dart';
 import 'package:untitled/PlayerStats.dart';
-import 'package:untitled/Tasks.dart';
+import 'package:untitled/drawerEndPoints/Tasks.dart';
 
-import 'home.dart';
+import 'drawerEndPoints/home.dart';
 
 
 class DrawerMenu extends StatelessWidget {
@@ -37,14 +37,14 @@ class DrawerMenu extends StatelessWidget {
                   leading: const Icon(Icons.home),
                   title: const Text('Home'),
                   onTap: () {
-                    onItemPressed(context, () => Home(playerStats: playerStats));
+                    onNavigationButtonPressed(context, () => Home(playerStats: playerStats));
                   },
                 ),
                 ListTile(
                   leading: const Icon(Icons.task),
                   title: const Text('Tasks'),
                   onTap: () {
-                    onItemPressed(context, () => Tasks(playerStats: playerStats));
+                    onNavigationButtonPressed(context, () => Tasks(playerStats: playerStats));
                   },
                 ),
                 ListTile(
@@ -59,7 +59,7 @@ class DrawerMenu extends StatelessWidget {
                 ),
                 ListTile(
                   leading: const Icon(Icons.accessibility_sharp),
-                  title: const Text('Car dealer'),
+                  title: const Text('Vehicle dealer'),
                   onTap: () {},
                 ),
                 ListTile(
@@ -89,7 +89,7 @@ class DrawerMenu extends StatelessWidget {
         ],
       );
   }
-void onItemPressed(BuildContext context, Widget Function() destinationBuilder) {
+void onNavigationButtonPressed(BuildContext context, Widget Function() destinationBuilder) {
   Navigator.pop(context); // Usunięcie aktualnego ekranu ze stosu nawigacyjnego
   Navigator.of(context).push(MaterialPageRoute(builder: (context) => destinationBuilder())); // Nawigacja do nowego ekranu
 }

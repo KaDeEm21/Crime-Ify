@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/DrawerMenu.dart';
-import 'PlayerStats.dart';
+import '../PlayerStats.dart';
 
 class Home extends StatefulWidget {
   final PlayerStats playerStats;
